@@ -7,19 +7,77 @@
 //
 
 import UIKit
+import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
+    @IBOutlet weak var tableView : UITableView!
+    var movieObject : Movie!
+    var moviesList = [Movie]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        movieObject = Movie()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        moviesList = movieObject.fetchMovieList()
+        tableView.reloadData()
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCellWithIdentifier("MovieCell") as? MovieCell {
+            let movie = moviesList[indexPath.row]
+            cell.configureCell(movie)
+            
+            return cell
+        }else{
+            return MovieCell()
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return moviesList.count
     }
 
 
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "DetailSegue") {
+            
+            var indexPath : Int!
+            
+            
+            //get the cell row index by locating it from the button parent
+            if let button = sender as? UIButton {
+                if let superview = button.superview {
+                    if let cell = superview.superview as? MovieCell {
+                        indexPath = tableView.indexPathForCell(cell)?.row
+                    }
+                }
+            }
+            
+            //get a reference to the destination view controller
+            let destinationVC = segue.destinationViewController as! DetailVC
+
+            if let idx = indexPath {
+                destinationVC.movie = moviesList[idx]
+            }
+
+
+        }
+        
+    }
 }
 
