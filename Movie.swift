@@ -11,11 +11,19 @@ import CoreData
 import UIKit
 
 
+
 class Movie: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
     
 
+    required override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertIntoManagedObjectContext: context)
+    }
+    
+//    convenience override init(entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext!) {
+//        self.init(entity: entity, insertIntoManagedObjectContext: context)
+//    }
     
     func setMovieImg(img : UIImage) {
         let data = UIImagePNGRepresentation(img)

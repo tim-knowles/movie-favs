@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView : UITableView!
     var movieObject : Movie!
@@ -18,14 +18,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        movieObject = Movie()
+        //movieObject = Movie()
+        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        movieObject = Movie(entity: NSEntityDescription.entityForName("Movie", inManagedObjectContext: context)!, insertIntoManagedObjectContext: .None)
         
         tableView.delegate = self
         tableView.dataSource = self
         
-
-        
     }
+
     
     override func viewDidAppear(animated: Bool) {
         moviesList = movieObject.fetchMovieList()

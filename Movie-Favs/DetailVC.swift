@@ -13,9 +13,10 @@ class DetailVC: UIViewController, UINavigationControllerDelegate {
 
     @IBOutlet weak var movieTitle : UILabel!
     @IBOutlet weak var movieDescription : UILabel!
-    @IBOutlet weak var movieImage : UILabel!
+    @IBOutlet weak var movieImage : UIImageView!
     @IBOutlet weak var movieCast : UILabel!
-    //@IBOutlet weak var movieRating : UILabel!
+    @IBOutlet weak var movieURL : UILabel!
+    @IBOutlet weak var movieRating : Rating!
     
     var movie : Movie!
     
