@@ -19,6 +19,7 @@
 		9F588C4E1C97D0CC00E300F2 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F588C4D1C97D0CC00E300F2 /* DetailVC.swift */; };
 		9F588C501C98208000E300F2 /* CreateMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F588C4F1C98208000E300F2 /* CreateMovieVC.swift */; };
 		9F588C521C9939E700E300F2 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F588C511C9939E700E300F2 /* Rating.swift */; };
+		9F9A86DF1C9C0BCB002BD8DA /* VerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9A86DE1C9C0BCB002BD8DA /* VerticalAlignLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9F588C4D1C97D0CC00E300F2 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		9F588C4F1C98208000E300F2 /* CreateMovieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMovieVC.swift; sourceTree = "<group>"; };
 		9F588C511C9939E700E300F2 /* Rating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		9F9A86DE1C9C0BCB002BD8DA /* VerticalAlignLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalAlignLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				9F588C391C97C42100E300F2 /* LaunchScreen.storyboard */,
 				9F588C4B1C97CF6000E300F2 /* MovieCell.swift */,
 				9F588C511C9939E700E300F2 /* Rating.swift */,
+				9F9A86DE1C9C0BCB002BD8DA /* VerticalAlignLabel.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9A86DF1C9C0BCB002BD8DA /* VerticalAlignLabel.swift in Sources */,
 				9F588C471C97CDA800E300F2 /* Movie+CoreDataProperties.swift in Sources */,
 				9F588C301C97C42100E300F2 /* ViewController.swift in Sources */,
 				9F588C4C1C97CF6000E300F2 /* MovieCell.swift in Sources */,
@@ -338,6 +342,7 @@
 				9F588C411C97C42100E300F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

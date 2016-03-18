@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var movieObject : Movie!
     var moviesList = [Movie]()
     
+    @IBOutlet var innerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,8 +27,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         tableView.dataSource = self
         
-        //Set background on the TableView object
-        tableView.layer.contents = UIImage(named:"background")!.CGImage
+        //Set background on the UIView object
+        innerView.layer.contents = UIImage(named:"background")!.CGImage
+        tableView.backgroundColor = UIColor(white: 1, alpha: 0)
+        //tableView.layer.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        //tableView.layer.contents = UIImage(named:"background")!.CGImage
     }
 
     
