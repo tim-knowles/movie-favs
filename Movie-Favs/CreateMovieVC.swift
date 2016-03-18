@@ -19,6 +19,7 @@ class CreateMovieVC: UIViewController, UIImagePickerControllerDelegate, UINaviga
     @IBOutlet weak var movieImg: UIImageView!
     @IBOutlet weak var movieRating: Rating!
     
+    @IBOutlet var innerView: UIView!
     
     
     var imagePicker: UIImagePickerController!
@@ -41,6 +42,8 @@ class CreateMovieVC: UIViewController, UIImagePickerControllerDelegate, UINaviga
         movieImg.layer.cornerRadius = 4.0
         movieImg.clipsToBounds = true
         
+        //Set background on the UIView object
+        innerView.layer.contents = UIImage(named:"background")!.CGImage
     }
 
 

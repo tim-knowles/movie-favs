@@ -17,6 +17,7 @@ class DetailVC: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var movieCast : UILabel!
     @IBOutlet weak var movieURL : UILabel!
     @IBOutlet weak var movieRating : Rating!
+    @IBOutlet weak var innerView: UIView!
     
     var movie : Movie!
     
@@ -26,18 +27,29 @@ class DetailVC: UIViewController, UINavigationControllerDelegate {
         if movie.movieTitle != nil {
             presentMovieDetail()
         }
+        
+        //Set background on the UIView object
+        innerView.layer.contents = UIImage(named:"background")!.CGImage
+
     }
     
     override func awakeFromNib() {
-
+//
     }
 
     func presentMovieDetail() {
-        if let title = movie!.movieTitle {
-            print("Title is \(title)")
-            //self.movieTitle.text = "test"
-            movieTitle.text = title
-        }
+//        if let title = movie!.movieTitle {
+//            print("Title is \(title)")
+//            //self.movieTitle.text = "test"
+//            movieTitle.text = title
+//        }
+        movieTitle.text = movie.movieTitle
+        movieDescription.text = movie.movieDesc
+        movieImage.image = movie.getMovieImg()
+        movieImage.layer.cornerRadius = 5.0
+        movieImage.clipsToBounds = true
+        movieURL.text = movie.movieLink
+        movieRating.rating = Int(movie.movieRating!)
     }
 
 

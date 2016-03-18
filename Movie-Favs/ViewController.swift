@@ -25,6 +25,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         tableView.dataSource = self
         
+        //Set background on the TableView object
+        tableView.layer.contents = UIImage(named:"background")!.CGImage
     }
 
     
