@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
     <entity name="Movie" representedClassName=".Movie" syncable="YES">
-        <attribute name="movieCast" optional="YES" attributeType="Transformable" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <attribute name="movieCast" optional="YES" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
         <attribute name="movieDesc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="movieImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="movieLink" optional="YES" attributeType="String" syncable="YES"/>
