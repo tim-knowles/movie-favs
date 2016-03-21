@@ -23,8 +23,8 @@
                                     <constraint firstAttribute="height" constant="80" id="ckm-Z7-tdP"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GPM-sZ-0FZ">
-                                <rect key="frame" x="0.0" y="152" width="600" height="448"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GPM-sZ-0FZ">
+                                <rect key="frame" x="0.0" y="144" width="600" height="456"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="104" id="jfD-Oh-dWY" customClass="MovieCell" customModule="Movie_Favs" customModuleProvider="target">
@@ -54,8 +54,8 @@
                                                         <segue destination="lLV-ki-2Rg" kind="show" identifier="DetailSegue" id="4Tx-kM-SxP"/>
                                                     </connections>
                                                 </button>
-                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Tg-rl-CsM" customClass="Rating" customModule="Movie_Favs" customModuleProvider="target">
-                                                    <rect key="frame" x="163" y="53" width="275" height="50"/>
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Tg-rl-CsM" customClass="Rating" customModule="Movie_Favs" customModuleProvider="target">
+                                                    <rect key="frame" x="163" y="54" width="275" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="6zR-PJ-tdl"/>
                                                         <constraint firstAttribute="width" constant="275" id="rcW-MU-2PT"/>
@@ -140,11 +140,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="COX-CC-56u">
-                                <rect key="frame" x="0.0" y="64" width="600" height="836"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COX-CC-56u">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="If0-xH-wng">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="836"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="If0-xH-wng">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GVp-nz-7q8">
                                                 <rect key="frame" x="20" y="148" width="560" height="217"/>
@@ -518,6 +518,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="2053" height="337"/>
+        <image name="logo" width="1026" height="168"/>
     </resources>
 </document>
