@@ -1,0 +1,6 @@
+framework module Pods_Movie_Favs {
+  umbrella header "Pods-Movie-Favs-umbrella.h"
+
+  export *
+  module * { export * }
+}

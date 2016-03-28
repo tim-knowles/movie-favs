@@ -366,13 +366,25 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="87c-bd-5US">
                                 <rect key="frame" x="20" y="114" width="560" height="473"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvW-lV-HVc">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qNP-qq-VU0">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
-                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next"/>
-                                    </textField>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvW-lV-HVc">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next"/>
+                                                <connections>
+                                                    <action selector="movieTitleChanged:" destination="a2b-4n-Wxc" eventType="editingChanged" id="W9K-xC-AjP"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="tvW-lV-HVc" secondAttribute="trailing" id="MsF-1N-Vdw"/>
+                                            <constraint firstItem="tvW-lV-HVc" firstAttribute="leading" secondItem="qNP-qq-VU0" secondAttribute="leading" id="vuw-m5-C7M"/>
+                                        </constraints>
+                                    </stackView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xl3-Ku-xrJ">
                                         <rect key="frame" x="0.0" y="40" width="560" height="30"/>
                                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -451,13 +463,13 @@
                                     <constraint firstItem="Xl3-Ku-xrJ" firstAttribute="leading" secondItem="87c-bd-5US" secondAttribute="leading" id="8QI-re-jyn"/>
                                     <constraint firstAttribute="trailing" secondItem="i8p-Tj-WOF" secondAttribute="trailing" id="C0f-Qs-ZsB"/>
                                     <constraint firstItem="S7E-VJ-xhM" firstAttribute="leading" secondItem="87c-bd-5US" secondAttribute="leading" id="LJ2-uW-egy"/>
+                                    <constraint firstAttribute="trailing" secondItem="qNP-qq-VU0" secondAttribute="trailing" id="O5l-qu-MCW"/>
+                                    <constraint firstItem="qNP-qq-VU0" firstAttribute="leading" secondItem="87c-bd-5US" secondAttribute="leading" id="SHi-4P-xAE"/>
                                     <constraint firstAttribute="trailing" secondItem="Xl3-Ku-xrJ" secondAttribute="trailing" id="Sd3-Ox-tlm"/>
                                     <constraint firstItem="g5L-fF-HW9" firstAttribute="leading" secondItem="87c-bd-5US" secondAttribute="leading" id="cgW-Ff-ocW"/>
-                                    <constraint firstAttribute="trailing" secondItem="tvW-lV-HVc" secondAttribute="trailing" id="eDd-sy-IRQ"/>
                                     <constraint firstItem="hSY-sW-dYA" firstAttribute="leading" secondItem="87c-bd-5US" secondAttribute="leading" id="fNh-rO-rfG"/>
                                     <constraint firstAttribute="trailing" secondItem="S7E-VJ-xhM" secondAttribute="trailing" id="g0b-qK-xxB"/>
                                     <constraint firstItem="SBd-Sv-9mK" firstAttribute="centerX" secondItem="87c-bd-5US" secondAttribute="centerX" id="hwZ-es-PAN"/>
-                                    <constraint firstItem="tvW-lV-HVc" firstAttribute="leading" secondItem="87c-bd-5US" secondAttribute="leading" id="zMA-6g-zkH"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -481,8 +493,10 @@
                         <outlet property="movieDesc" destination="Xl3-Ku-xrJ" id="e4P-pA-t1q"/>
                         <outlet property="movieImg" destination="Kqd-UZ-Q1B" id="ojX-hH-d8d"/>
                         <outlet property="movieRating" destination="SBd-Sv-9mK" id="LrH-e1-Q6x"/>
+                        <outlet property="movieStack" destination="87c-bd-5US" id="fHS-Kw-g8d"/>
                         <outlet property="movieTitle" destination="tvW-lV-HVc" id="p0o-S5-jy7"/>
                         <outlet property="movieURL" destination="i8p-Tj-WOF" id="KdT-CK-WW9"/>
+                        <outlet property="titleStack" destination="qNP-qq-VU0" id="3T0-wu-mag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DD9-zB-1h6" userLabel="First Responder" sceneMemberID="firstResponder"/>
